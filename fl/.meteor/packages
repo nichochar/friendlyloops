@@ -6,3 +6,10 @@
 autopublish
 insecure
 preserve-inputs
+accounts-facebook
+router
+backbone
+underscore
+random
+coffeescript
+accounts-ui

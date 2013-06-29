@@ -1,0 +1,85 @@
+//=============================================================//
+//                  LAYOUT - WEB
+//=============================================================//
+
+@import "bootstrap-sass/_grid";
+
+html, body {
+  height:100%;
+}
+body {
+    margin: 0;
+    font-family: $baseFontFamily;
+    width: 100%;
+    font-family: $baseFontFamily;
+    font-size: $baseFontSize;
+    line-height: $baseLineHeight;
+    background-color: $bodyBackground;
+    color: $textColor;
+}
+
+/*=== Float Containment and Bug Fixes (Do Not Alter These!) ===*/
+body:before {/*Opera min-height 100% Fix*/
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;/*eliminate need for inner non clearing element*/
+}
+#wrapper:after, /*#wrapper:after for IE8 min-height:100% Fix*/
+#content:after {/*#content:after for Float Containment*/
+    clear:both;
+    content:"";
+    display:block;
+    height:1%;/*fix IE8 min-height:100% bug*/
+    font-size:0;
+}
+
+/*===  Begin Layout Structure ===*/
+#wrapper {
+    text-align: center;
+    margin:auto;
+    min-height:100%;
+    /*background: url(#{$imagePath}/backgrounds/red_hexagons.jpg) no-repeat center top fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+} 
+/*#navbar-header {*/
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*min-width: 320px;*/
+    /*height: $navbarHeight;*/
+
+    /*padding: 0;*/
+    /*margin: 0 0 20px 0;*/
+    /*box-shadow: 0 -8px 5px 10px rgba(0,0,0,.1);*/
+    /*border-bottom: 1px solid #221f1c;*/
+    /*z-index: $zindexFixedNavbar;*/
+/*}*/
+#content {
+    /*padding-bottom: 50px;*/
+    min-height:500px;
+}
+
+.content-page {
+    /*margin-top: $headerHeight;*/
+}
+
+
+/*.footer-push { */
+    /*height: $footerHeight; */
+/*}*/
+
+.content-page-full {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    /*min-height: 600px;*/
+    margin: 0 auto;
+}
+

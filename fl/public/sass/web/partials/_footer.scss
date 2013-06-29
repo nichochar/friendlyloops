@@ -1,0 +1,16 @@
+footer {
+
+}
+#footer {
+    /*clear: both;*/
+    /*position: relative;*/
+    /*z-index: 10;*/
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+    height: $footerHeight;
+    /*margin-top: $footerHeight;*/
+    background: transparent;
+}
+
+

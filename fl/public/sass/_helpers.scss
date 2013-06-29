@@ -1,0 +1,156 @@
+//
+// GENERAL HELPERS
+// =====================================================
+
+@import "bootstrap-sass/_utilities";    // clearfix, pull-right, pull-left, hide, input-block-level, etc. 
+@import "bootstrap-sass/_component-animations";
+
+.spacer5 { height: 5px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer10 { height: 10px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer15 { height: 15px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer20 { height: 20px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer25 { height: 25px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer30 { height: 30px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer35 { height: 35px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer40 { height: 40px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer45 { height: 45px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer50 { height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer100 { height: 100px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer150 { height: 150px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer200 { height: 200px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+
+// Append ... when overflow for long names & text
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Layout helpers
+.inline-block {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+}
+.inline { display: inline; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-middle { vertical-align: middle; }
+.text-bottom { vertical-align: bottom; }
+.text-top { vertical-align: top; }
+
+.text-shadow{
+    text-shadow: -1px -1px 1px rgba(111,81,8,.72);
+}
+
+.auto-center-960 {
+  margin: 0 auto;
+  width: 960px;
+  position: relative;
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  height: inherit;
+}
+.auto-center-980 {
+  @extend .auto-center-960;
+  width: 980px;
+}
+
+.border-box {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+// Margin and padding helpers
+.m0 { margin: 0; }
+.m5 { margin: 5px; }
+.m50 { margin: 50px; }
+.m10 { margin: 10px; }
+.m20 { margin: 20px; }
+.ml0 { margin-left: 0; }
+.ml5 { margin-left: 5px; }
+.ml10 { margin-left: 10px; }
+.ml20 { margin-left: 20px; }
+.mr0 { margin-right: 0; }
+.mr5 { margin-right: 5px; }
+.mr10 { margin-right: 10px; }
+.mr15 { margin-right: 15px; }
+.mr20 { margin-right: 20px; }
+.mb0 { margin-bottom: 0; }
+.mb5 { margin-bottom: 5px; }
+.mb10 { margin-bottom: 10px; }
+.mb20 { margin-bottom: 20px; }
+.mb50 { margin-bottom: 50px; }
+.mb100 { margin-bottom: 100px; }
+.mt0 { margin-top: 0px; }
+.mt5 { margin-top: 5px; }
+.mt10 { margin-top: 10px; }
+.mt15 { margin-top: 15px; }
+.mt20 { margin-top: 20px; }
+.mt50 { margin-top: 50px; }
+.mt100 { margin-top:100px; }
+.p0 { padding: 0; }
+.p5 { padding: 5px; }
+.p10 { padding: 10px; }
+.p20 { padding: 20px; }
+.pl0 { padding-left: 0; }
+.pl5 { padding-left: 5px; }
+.pl10 { padding-left: 10px; }
+.pl20 { padding-left: 20px; }
+.pl50 { padding-left: 50px; }
+.pr0 { padding-right: 0; }
+.pr10 { padding-right: 10px; }
+.pr20 { padding-right: 20px; }
+.pb0 { padding-bottom: 0; }
+.pb5 { padding-bottom: 5px; }
+.pb10 { padding-bottom: 10px; }
+.pb20 { padding-bottom: 20px; }
+.pb50 { padding-bottom: 50px; }
+.pt5 { padding-top: 5px; }
+.pt10 { padding-top: 10px; }
+.pt20 { padding-top: 20px; }
+.pt50 { padding-top: 50px; }
+
+.lh-base { line-height: $baseFontSize; }
+
+
+
+// font weight helpers
+.extra-bold { font-weight: bolder; }
+.bold { font-weight: bold; }
+.normal { font-weight: normal; }
+.book { font-weight: lighter; }
+
+.hide {
+    /*display: none !important;*/
+    display: none;
+}
+
+.middle {
+    vertical-align:middle;
+}
+
+.noFocus {
+    outline: none;
+}
+
+.bg-image-crop {
+    overflow:hidden;
+    position:relative;
+    margin-left: 0;
+    & > img { position: absolute; left: 0; }
+}
+
+.overlay {
+    position: absolute;
+    z-index: 5;
+}
+
+.pointer {
+    cursor: pointer;
+}
+

@@ -1,0 +1,48 @@
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    
+    &.input {
+        background: rgba(255, 255, 255, 0.6);
+        font-family: $sansFontFamily;
+    }
+
+    &.input-extra-large {
+        height: 60px;
+        font-size: 32px;
+        width: 400px;
+        padding-left: 30px;
+        line-height: normal;
+    }
+}
+
+
+
+.placeholding-input .placeholder {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 2px;
+    z-index: 1;
+    height: 20px;
+    padding: 4px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #999;
+    white-space: nowrap;
+    cursor: text;
+    -webkit-transition: opacity .1s,font-size .1s;
+    -moz-transition: opacity .1s,font-size .1s;
+    -o-transition: opacity .1s,font-size .1s;
+    transition: opacity .1s,font-size .1s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.placeholding-input {
+    position: relative;
+    overflow: visible;
+}
+
