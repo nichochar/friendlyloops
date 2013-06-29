@@ -2,39 +2,18 @@
 //                  TEXT - SHARED
 //=============================================================//
 
-/* Open Sans - Google Web Fonts */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+/* Lato - Google Web Fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,900);
 
-@font-face {
-    font-family: 'Chaparral';
-    src: url(#{$fontPath}/ChaparralPro-Regular.otf);
-}
-@font-face {
-    font-family: 'Chaparral';
-    src: url(#{$fontPath}/ChaparralPro-Bold.otf);
-    font-weight: bold;
-}
-@font-face {
-    font-family: 'Chaparral';
-    src: url(#{$fontPath}/ChaparralPro-BoldIt.otf);
-    font-weight: bold, italic;
-}
-@font-face {
-    font-family: 'Chaparral';
-    src: url(#{$fontPath}/ChaparralPro-Italic.otf);
-    font-weight: italic;
-}
-
-/*$sansFontFamily:        "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;*/
-$sansFontFamily:        "Open Sans";
+/*$sansFontFamily:        "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;*/
+$sansFontFamily:        "Lato", "Helvetica Neue", Helvetica, Arial;
 /*$serifFontFamily:       "Chaparral", Georgia, "Times New Roman", Times, serif !default;*/
-$serifFontFamily:       "Chaparral";
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
 $baseFontSize:          16px !default;
 $baseFontFamily:        $sansFontFamily !default;
 $baseLineHeight:        20px !default;
-$altFontFamily:         $serifFontFamily !default;
+$altFontFamily:         $monoFontFamily !default;
 
 $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    bold !default;    // instead of browser default, bold
