@@ -1,0 +1,15 @@
+<template name="body">
+    {{> header}}
+
+    <div class="container content-wrapper template-{{pageName}}">
+        <div class="page-wrapper">
+            {{renderPage}}
+
+            <div class="footer-push"></div>
+
+        </div>
+        {{> footer}}
+        <div class="overlay hide"></div>
+    </div>
+
+</template>
