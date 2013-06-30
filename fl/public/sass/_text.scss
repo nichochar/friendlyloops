@@ -16,7 +16,7 @@ $baseLineHeight:        20px !default;
 $altFontFamily:         $monoFontFamily !default;
 
 $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
-$headingsFontWeight:    bold !default;    // instead of browser default, bold
+$headingsFontWeight:    normal !default;    // instead of browser default, bold
 $headingsColor:         inherit !default; // empty to use BS default, $textColor
 
 a {
@@ -24,7 +24,7 @@ a {
     color: $orange;
 }
 
-.sans { font-family: "Open Sans"; }
+.lato { font-family: $sansFontFamily; }
 .serif { font-family: "Chaparral"; }
 
 .text-center { text-align: center; }
@@ -44,7 +44,7 @@ a {
 .text-green { color: $cp-green; }
 
 em, .em { font-style: italic; }
-.book { font-weight: 300; }
+.book { font-weight: 100; }
 .thin { font-weight: 500; }
 .bold { font-weight: 600; }
 .bolder { font-weight: 700; }
@@ -72,7 +72,7 @@ h2,
 h3 { line-height: $baseLineHeight * 2; }
 
 
-h1, .h1 { font-size: $baseFontSize * 4.25; } // ~38px
+h1, .h1 { font-size: $baseFontSize * 7; } // ~38px
 h2, .h2 { font-size: $baseFontSize * 2.25; } // ~32px
 h3, .h3 { font-size: $baseFontSize * 1.75; } // ~24px
 h4, .h4 { font-size: $baseFontSize * 1.25; } // ~18px
