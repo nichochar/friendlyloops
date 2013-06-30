@@ -4,8 +4,7 @@ Template.room_page.helpers
     room : ->
         Rooms.findOne( Session.get('current_roomId') )
 
-Template.rooms_page.helpers
-    rooms: ->
+Template.rooms_page.rooms = ->
         tmpRooms = Rooms.find().fetch()
         for room, i in tmpRooms
             tmpRooms[i].currentPlayerCount = room.players?.length
