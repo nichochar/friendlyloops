@@ -52,26 +52,6 @@ do ->
         Meteor.subscribe 'rooms'
         showView 'rooms_page', { page: page, type: 'rooms' }
 
-
-    # Artist Routes
-    routeArtist = (artistId) ->
-        Session.set('current_artistId', artistId)
-        showView 'artist_page', { type: 'artists' }
-
-    routeArtists = (page) ->
-        showView 'artists_page', { page: page, type: 'artists' }
-
-
-    # User Routes
-    routeUser = (userId) ->
-        Session.set('current_userId', userId)
-        showView 'user_page', { type: 'users' }
-
-    routeUsers = (page) ->
-        showView 'users_page', { page: page, type: 'users' }
-
-
-
     # Setup our app's url routes
     Meteor.Router.add
         '/'                         : routeHome
