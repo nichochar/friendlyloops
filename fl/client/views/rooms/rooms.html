@@ -1,4 +1,5 @@
 <template name="rooms_page">
+    <div class="spacer50"></div>
     <h1> Beat Sessions </h1>
     <div class="spacer50"></div>
     <div class="container">
@@ -24,17 +25,18 @@
 
 <template name="room_list_item">
     <tr>
-        <td>{{name}}</td>
+        <td><a href="/rooms/{{_id}}">{{name}}</a></td>
         <td>{{currentPlayerCount}} / 3</td>
         <td>{{#unless isFull}}<a class="join-room-link" href="#" data-room="{{_id}}">Join!</a>{{/unless}}</td>
-        <td>{{#if isAdmin}}<a class="delete-room-link" data-room="{{_id}}" href="#">Remove</a></td>{{/if}}</td>
+        <td>{{#if currentUser.isAdmin}}<a class="delete-room-link" data-room="{{_id}}" href="#">Remove</a></td>{{/if}}</td>
     </tr>
 </template>
 
 
 
 <template name="room_page">
-    <h1 class='lato text-center'> {{ room.name }} </h1>
+    <h1 class='lato text-center book'> {{ room.name }} </h2>
+    <div class="spacer50"></div>
 
     <div class="container">
         {{#each room.players}}
@@ -48,8 +50,12 @@
 </template>
 
 <template name="room_player_loops">
-    <div class="span4 well text-center">
-        <h4>{{first_name}}</h4>
+    <div class="span4 text-center">
+        <div class="clearfix">
+            <img class="img-circle pull-left" src="http://graph.facebook.com/{{services.facebook.username}}/picture">
+            <h2 class="pull-left ml20 book">{{services.facebook.first_name}}</h2>
+        </div>
+            
 
         <div class="spacer50"></div>
 
@@ -73,30 +79,24 @@
 
 
 <template name="room_chat">
-    <div class="chat">
-        <div class="messages box">
-            {{#unless noMessages}}
-                {{#each messages}}
-                    {{> room_chat_message}}
-                {{/each}}
-            {{/unless}}
+    <div class="container">
+        <div class="chat">
+            <div class="messages box">
+                {{#unless noMessages}}
+                    {{#each messages}}
+                        {{> room_chat_message}}
+                    {{/each}}
+                {{/unless}}
 
-            {{#if noMessages}}
-                <span class="loading">
-                    Please wait while we are loading messages for you...
-                </span>
-            {{/if}}
-        </div>
-        <div class="grid input">
-            <div class="row-fluid">
-                <div class="span8">
-                    <input type="text" id="input-chat" placeholder="Type your message here..." />
-                </div>
-                <div class="span4">
-                    <button id="button-sendMessage" class="btn btn-primary">
-                        Send
-                    </button>
-                </div>
+                {{#if noMessages}}
+                    <span class="loading">
+                        Please wait while we are loading messages for you...
+                    </span>
+                {{/if}}
+            </div>
+            <div class="grid input">
+                <input class="pull-left" type="text" id="input-chat" style="width:80%;height:40px;" placeholder="Type your message here..." />
+                <button id="button-sendMessage" class="btn btn-small"> Send </button>
             </div>
         </div>
     </div>

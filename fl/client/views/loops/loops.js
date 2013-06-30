@@ -28,7 +28,9 @@ Template.loops_page.helpers({
 Template.loop_item.helpers({
     alreadyChosen: function(){
         var loopsArr = Meteor.call('getChosenLoops', Session.get('current_roomId'));
-        return ( loopsArr.indexOf( Session.get('current_loopId') ) > 0 );
+        //if(loopsArr) return ( loopsArr.indexOf( ) ) ) > 0 );
+        //else return 
+        return false;
     },
     misc: function(){
         var loop = Loops.find( Session.get('current_loopId') );

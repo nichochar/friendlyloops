@@ -19,8 +19,12 @@ Meteor.methods({
     
     // Return an array of loop ids which have already been chosen by players
     getChosenLoops: function(roomId){
-        var room = Rooms.findOne(roomId);
-        return _(room.playerLoops || []).pluck('loopId');
+        if(typeof roomId === 'undefined'){
+            return [];
+        } else {
+            var room = Rooms.find(roomId);
+            return _(room.playerLoops || []).pluck('loopId');
+        }
     }
 
 });

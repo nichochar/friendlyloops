@@ -28,8 +28,29 @@ Accounts.onCreateUser(function(options, user){
     return user;
 });
 
-Meteor.startup(function(){
+Accounts.loginServiceConfiguration.remove({
+    service: {
+        $in: ["facebook"]
+    }
+});
 
+Accounts.loginServiceConfiguration.insert({
+    service: "facebook",
+    appId: apiKeys.facebook.key,
+    secret: apiKeys.facebook.secret
+});
+
+//Accounts.ui.config({
+    //requestPermissions: {
+        //facebook: [],
+
+    //}
+    ////passwordSignupFields : {
+//});
+
+
+
+Meteor.startup(function() {
     // Set interval for users online
     Meteor.setInterval(function() {
         Meteor.users.update({'profile.lastPing': {$gte: getValidOnlineDate()}}, {$set: {'profile.online': true}});

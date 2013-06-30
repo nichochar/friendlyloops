@@ -3,18 +3,18 @@
  */
 
 isAdminById=function(userId){
-  var user = Meteor.users.findOne(userId);
-  return user && isAdmin(user);
+    var user = Meteor.users.findOne(userId);
+    return user && isAdmin(user);
 };
 
 isAdmin=function(user){
-  if(!user || typeof user === 'undefined')
-    return false;
-  return !!user.isAdmin;
+    if(!user || typeof user === 'undefined')
+        return false;
+    return !!user.isAdmin;
 };
 
 adminUsers = function(){
-  return Meteor.users.find({isAdmin : true}).fetch();
+    return Meteor.users.find({isAdmin : true}).fetch();
 };
 
 getDisplayName = function(user) {
@@ -25,8 +25,8 @@ getDisplayName = function(user) {
     }
 };
 getDisplayNameById = function(userId){
-  return getDisplayName(Meteor.users.findOne(userId));
-}
+    return getDisplayName(Meteor.users.findOne(userId));
+};
 getFacebookName = function(user) {
     try {
         return user.services.facebook.username;
@@ -47,8 +47,8 @@ getAvatarUrl = function(user) {
 
 
 
-var MAIN_THREAD_NAME = "main";
-var SERVER_USERID = "_";
+//var MAIN_THREAD_NAME = "main";
+//var SERVER_USERID = "_";
 // delay, for how long a client does not have to have updated it's ping to still be considered online
 var LASTPING_DELAY = 10000; // in ms
 

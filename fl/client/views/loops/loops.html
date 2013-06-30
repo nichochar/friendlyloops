@@ -1,4 +1,5 @@
 <template name="loops_page">
+    <div class="spacer50"></div>
     <h1> Loops </h1>
     <div class="spacer20"></div>
     <h3> Choose 3 friendly loops </h3>
@@ -41,7 +42,7 @@
             </ul>
         </div>
     </div>
-    <div class="container">
+    <div class="container mt20">
         <div class="span12">
             <h4>Misc</h4>
             <hr>
@@ -59,10 +60,10 @@
     <li>
         <div class="loop-item {{#if misc}}pull-left{{/if}} clearfix">
             <a href="#" class="play-loop pull-left" data-loop="{{_id}}">
-                <i class="icon-bootstrap-play icon-white pull-left"></i> 
+                <i class="icon-bootstrap-play icon-white pull-left text-gray"></i> 
             </a>
             <a href="#" class="choose-loop" data-loop="{{_id}}">
-                <span class="loop-item-name ml10">{{name}}</span>
+                <span class="loop-item-name ml10 {{#if alreadyChosen}}text-gray default-cursor{{/if}}">{{name}}</span>
             </a>
         </div>
     </li>

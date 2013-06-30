@@ -1,14 +1,14 @@
 
 sampleRooms = [
-    {
-        name: "Jam laboratory",
-        players: [
-            {
-                _id: "x79Qf9i3APqpYAobM"
-            }
-        ],
-        ownerId: "x79Qf9i3APqpYAobM"
-    }
+    //{
+        //name: "Jam laboratory",
+        //players: [
+            //{
+                //_id: "x79Qf9i3APqpYAobM"
+            //}
+        //],
+        //ownerId: "x79Qf9i3APqpYAobM"
+    //}
 ];
 
 sampleLoops = [

@@ -118,7 +118,9 @@
 .lh-base { line-height: $baseFontSize; }
 
 
-
+.default-cursor {
+    cursor: default;
+}
 // font weight helpers
 .extra-bold { font-weight: bolder; }
 .bold { font-weight: bold; }
