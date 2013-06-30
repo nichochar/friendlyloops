@@ -24,13 +24,16 @@ Template.loops_page.helpers({
 });
 
 
-
+//Template.loop_item.rendered
 Template.loop_item.helpers({
     alreadyChosen: function(){
         var loopsArr = Meteor.call('getChosenLoops', Session.get('current_roomId'));
-        //if(loopsArr) return ( loopsArr.indexOf( ) ) ) > 0 );
-        //else return 
-        return false;
+        var chosenLoops = Rooms.find( Session.get("current_roomId") ).map( function(val, i){
+            return val.playerLoops;    
+        });
+
+        return ( chosenLoops.indexOf( this ) > 0 );
+
     },
     misc: function(){
         var loop = Loops.find( Session.get('current_loopId') );
@@ -56,7 +59,11 @@ Template.loop_item.events({
     },
     "click .choose-loop": function(evt){
         evt.preventDefault();
-        var loop = $(evt.target).closest('a').data('loop');
+        var loopId = $(evt.target).closest('a').data('loop');
+        var loop = Loops.find( loopId );
+        Session.set("my_chosen_loops", Session.get("my_chosen_loops").push( loop )); 
+        console.log( Session.get('current_roomId') );
+        Meteor.call('chooseLoop', this, Session.get('current_roomId'));
 
     }
 });

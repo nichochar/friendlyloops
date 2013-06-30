@@ -22,7 +22,11 @@ Template.rooms_page.events({
         newRoomId = Rooms.insert({
             name: $("#create-room-input").val()
         });
+        
+        Session.set('current_roomId', newRoomId);
         Meteor.call('joinRoom', newRoomId);
+        //Session.set('current_page', 'loops_page');
+        
         window.location.href = '/loops';
         //return window.location.href = '/rooms/' + newRoomId;
     },
@@ -33,6 +37,7 @@ Template.room_list_item.events({
         evt.preventDefault();
         var roomId = $(evt.target).data('room');
         Meteor.call('joinRoom', roomId);
+        //Session.set('current_page', 'loops_page');
         window.location.href = '/loops';
         //window.location.href = '/rooms/'+roomId;
     },

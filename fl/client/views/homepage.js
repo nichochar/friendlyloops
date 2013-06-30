@@ -19,6 +19,7 @@ Template.home_page.events({
                 console.log("ERROR logging in with facebook" + err);
             } else {
                 console.log("Logged in with facebook");
+                Session.set('current_page', 'rooms_page');
                 window.location.href = window.location.origin + '/rooms';
             }
         });

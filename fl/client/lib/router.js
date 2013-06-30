@@ -30,7 +30,7 @@ vim: ts=4 sw=4 et :
         });
     };
     routeLoops = function(page) {
-        Meteor.subscribe('loops');
+        Session.set("my_chosen_loops", (Session.get("my_chosen_loops") || []));
         return showView('loops_page', {
             page: page,
             type: 'loops'
@@ -56,7 +56,7 @@ vim: ts=4 sw=4 et :
         });
     };
     routeRooms = function(page) {
-        Meteor.subscribe('rooms');
+        //Meteor.subscribe('rooms');
         return showView('rooms_page', {
             page: page,
             type: 'rooms'
@@ -84,12 +84,12 @@ vim: ts=4 sw=4 et :
         '/users/:id': routeUser
     });
     Meteor.startup(function() {
-        //Deps.autorun(function() {
-            //Meteor.Router.page();
-        //});
-        Meteor.autorun(function(){
+        Deps.autorun(function() {
             Meteor.Router.page();
         });
+        //Meteor.autorun(function(){
+            //Meteor.Router.page();
+        //});
 
     });
 })();
