@@ -30,6 +30,7 @@ vim: ts=4 sw=4 et :
         });
     };
     routeLoops = function(page) {
+        Meteor.subscribe('loops');
         return showView('loops_page', {
             page: page,
             type: 'loops'
@@ -82,10 +83,13 @@ vim: ts=4 sw=4 et :
         '/users': routeUsers,
         '/users/:id': routeUser
     });
-    return Meteor.startup(function() {
-        return Deps.autorun(function() {
-            return Meteor.Router.page();
+    Meteor.startup(function() {
+        //Deps.autorun(function() {
+            //Meteor.Router.page();
+        //});
+        Meteor.autorun(function(){
+            Meteor.Router.page();
         });
+
     });
 })();
-

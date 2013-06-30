@@ -1,13 +1,14 @@
 <template name="loops_page">
     <h1> Loops </h1>
-    <h5> Choose 3 friendly loops </h5>
+    <div class="spacer20"></div>
+    <h3> Choose 3 friendly loops </h3>
 
     <div class="container">
         <div class="span3">
             <h4>Drums</h4>
             <hr>
             <ul>
-                {{#each loops.drums}}
+                {{#each drumLoops}}
                     {{> loop_item}}
                 {{/each}}
             </ul>
@@ -16,7 +17,7 @@
             <h4>Bass</h4>
             <hr>
             <ul>
-                {{#each loops.bass}}
+                {{#each bassLoops}}
                     {{> loop_item}}
                 {{/each}}
             </ul>
@@ -25,7 +26,7 @@
             <h4>Guitar</h4>
             <hr>
             <ul>
-                {{#each loops.guitar}}
+                {{#each guitarLoops}}
                     {{> loop_item}}
                 {{/each}}
             </ul>
@@ -34,7 +35,7 @@
             <h4>Vox</h4>
             <hr>
             <ul>
-                {{#each loops.misc}}
+                {{#each miscLoops}}
                     {{> loop_item}}
                 {{/each}}
             </ul>

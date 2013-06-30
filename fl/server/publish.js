@@ -45,17 +45,15 @@ Meteor.startup(function() {
     });
 });
 
-/* ROOMS
+
+
+/*
+ * ROOMS
 */
 
+Meteor.publish('rooms', function() { return Rooms.find(); });
 
-Meteor.publish('rooms', function() {
-    return Rooms.find();
-});
-
-Meteor.publish('room', function(roomId) {
-    return Rooms.find(roomId);
-});
+Meteor.publish('room', function(roomId) { return Rooms.find(roomId); });
 
 Meteor.startup(function() {
     return Rooms.allow({
@@ -71,6 +69,27 @@ Meteor.startup(function() {
     });
 });
 
+
+/*
+ *  LOOPS
+*/
+Meteor.publish('loops', function(){ return Loops.find(); });
+Meteor.publish('loop', function(loopId){ return Loops.find(loopId); });
+Meteor.startup(function() {
+    return Loops.allow({
+        insert: function(userId, doc) {
+            return true;
+        },
+        update: function(userId, doc) {
+            return true;
+            //return (doc._id && doc._id === userId);
+        },
+        remove: function(userId, doc) {
+            return true;
+            //return (doc._id && doc._id === userId);
+        }
+    });
+});
 
 
 /*

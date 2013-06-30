@@ -5,9 +5,9 @@ Meteor.subscribe('currentUser');
 
 Meteor.subscribe('allUsers');
 
-Meteor.subscribe('rooms');
+//Meteor.subscribe('rooms');
 
-Meteor.subscribe('loops');
+//Meteor.subscribe('loops');
 
 
 // Set the interval for active users

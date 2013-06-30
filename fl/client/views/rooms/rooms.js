@@ -33,7 +33,8 @@ Template.room_list_item.events({
         evt.preventDefault();
         var roomId = $(evt.target).data('room');
         Meteor.call('joinRoom', roomId);
-        window.location.href = '/rooms/'+roomId;
+        window.location.href = '/loops';
+        //window.location.href = '/rooms/'+roomId;
     },
     'click .delete-room-link': function(evt){
         evt.preventDefault();

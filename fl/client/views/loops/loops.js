@@ -1,25 +1,25 @@
 
 
-
-
-
-
 Template.loops_page.helpers({
-
-    loops: function(){
-        var loopsArr = Loops.find().fetch();
-        
-        // Create arrays with keys of the loop's instrument
-        for(var i = 0; i < loopsArr.length; i++){
-            var instrument = loopsArr[i].instrument;
-            if(typeof loopsArr[instrument] === 'undefined') loopsArr[instrument] = [];
-            loopsArr[instrument].push( loopsArr[i] );
-        }
-
-        console.log( loopsArr );
-        
-        return loopsArr;
+    drumLoops: function(){
+        return Loops.find({ instrument: "drums" }).fetch(); 
     },
+    guitarLoops: function(){
+        return Loops.find({ instrument: "guitar" }).fetch();
+
+    },
+    bassLoops: function(){
+        return Loops.find({ instrument: "bass" }).fetch();
+
+    },
+    voxLoops: function(){
+        return Loops.find({ instrument: "vox" }).fetch();
+
+    },
+
+    miscLoops: function(){
+        return Loops.find({ instrument: "misc" }).fetch();
+    }
 
 });
 
@@ -31,7 +31,7 @@ Template.loop_item.helpers({
         return ( loopsArr.indexOf( Session.get('current_loopId') ) > 0 );
     },
     misc: function(){
-        var loop = Loops.findOne( Session.get('current_loopId') );
+        var loop = Loops.find( Session.get('current_loopId') );
         return (loop.instrument === 'misc' );
     }
 });
@@ -41,7 +41,9 @@ Template.loop_item.helpers({
 Template.loop_item.events({
     "click .play-loop": function(evt){
         evt.preventDefault();
-        var loop = Loops.findOne( $(evt.target).data('loop') );
+        console.log( $(evt.target).closest('a').data('loop') );
+        var loop = Loops.findOne( $(evt.target).closest('a').data('loop') );
+        console.log( loop );
         var mySound = soundManager.createSound({
             id: loop._id,
             url: loop.url,
