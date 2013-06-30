@@ -76,3 +76,15 @@ if Meteor.isServer
     ### ALERTS ###
     #Meteor.publish 'alerts', -> Alerts.find()
 
+
+if Meteor.isClient
+    # Users
+    Meteor.subscribe 'currentUser'
+    Meteor.subscribe 'allUsers'
+
+    # Rooms
+    Meteor.subscribe 'rooms'
+
+    # Loops
+    Meteor.subscribe 'loops'
+

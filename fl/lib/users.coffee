@@ -20,5 +20,5 @@ getFacebookNameById = (userId) ->
 
 
 getAvatarUrl = (user) ->
-    if getSignupMethod(user) is "facebook"
+    if user.services.facebook
         "http://graph.facebook.com/" + user.services.facebook.screenName + "/picture"

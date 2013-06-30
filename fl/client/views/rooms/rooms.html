@@ -1,5 +1,27 @@
 <template name="rooms_page">
     <h1> Rooms </h1>
+    <div class="container">
+        <div class="well">
+            <table id="rooms-table" class="table table-striped table-hover">
+                <thead>
+                    <th>Room Name</th>
+                    <th>Players</th>
+                </thead>
+            
+                {{#each rooms}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.currentPlayerCount}} / 3</td>
+                    <td><a href="/rooms/{{this._id}}">Join!</a></td>
+                </tr>
+                {{/each}}
+
+            </table>
+            
+            <input id="create-room-input" type="text">
+            <button id="create-room-btn" class="btn btn-large">Create Room</button>
+        </div>
+    </div>
 </template>
 
 <template name="room_page">

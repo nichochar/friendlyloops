@@ -4,7 +4,7 @@ Meteor.user = {
     services: {
         facebook: {
             id: "218293811",
-            name: "asdlkfjasdf",
+            name: "Alex Ehrns",
             username: "ehrns"
         }
     },
@@ -13,10 +13,14 @@ Meteor.user = {
 
 
 Room = {
-
     _id:    "aslkdfjlasjfw8efu",
     name:   "My Room",
     owner_id: "asldfkjasldfjaa",
+    players: [
+        {
+            _id: "sakdjflas"
+        }
+    ],
     createdAt: "timestamp"
 
 };
