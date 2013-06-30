@@ -44,3 +44,30 @@ getAvatarUrl = function(user) {
         return "http://graph.facebook.com/" + user.services.facebook.screenName + "/picture";
     }
 };
+
+
+
+var MAIN_THREAD_NAME = "main";
+var SERVER_USERID = "_";
+// delay, for how long a client does not have to have updated it's ping to still be considered online
+var LASTPING_DELAY = 10000; // in ms
+
+
+getValidOnlineDate = function() {
+    return new Date().getTime() - LASTPING_DELAY;
+};
+
+getOnlineUsersCount = function() {
+    var validPingDate = new Date().getTime() - LASTPING_DELAY;
+    return Meteor.users.find({
+        'profile.lastPing': { $gte: validPingDate },
+    }).count();
+};
+
+getOnlineUsersCountThread = function(name) {
+    var validPingDate = getValidOnlineDate();
+    return Meteor.users.find({
+        'profile.currentThread': name,
+        'profile.lastPing': { $gte: validPingDate }
+    }).count();
+};

@@ -21,11 +21,19 @@ Accounts.onCreateUser(function(options, user){
     //user._id = user.services.facebook
 
     // if this is the first user ever, make them an admin
-    if ( !Meteor.users.find().count() )
-    user.isAdmin = true;
+    if ( !Meteor.users.find().count() ) user.isAdmin = true;
 
     //trackEvent('new user', {username: user.username, email: user.profile.email});
 
     return user;
 });
 
+Meteor.startup(function(){
+
+    // Set interval for users online
+    Meteor.setInterval(function() {
+        Meteor.users.update({'profile.lastPing': {$gte: getValidOnlineDate()}}, {$set: {'profile.online': true}});
+        Meteor.users.update({'profile.lastPing': {$lt: getValidOnlineDate()}}, {$set: {'profile.online': false}});
+    }, 10000);
+
+});

@@ -23,12 +23,14 @@ Meteor.setInterval(function () {
     }
 }, 10000);
 
-// Setup the soundManager for playing loops
-soundManager.setup({
-    url: '/swf/',
-    flashVersion: 9,
-    onready: function() {
-        //Play sound on read?
-    }
+Meteor.startup(function(){
+    // Setup the soundManager for playing loops
+    soundManager.setup({
+        url: '/swf/',
+        flashVersion: 9,
+        onready: function() {
+            //Play sound on read?
+        }
+    });
 });
 

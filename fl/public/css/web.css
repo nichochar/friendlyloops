@@ -9201,7 +9201,7 @@ textarea.input-extra-large, input[type="text"].input-extra-large, input[type="pa
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  height: inherit; }
+  /*height: inherit;*/ }
 
 /* line 59, ../sass/_helpers.scss */
 .auto-center-980 {

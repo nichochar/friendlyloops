@@ -48,8 +48,9 @@ Template.loop_item.events({
             id: loop._id,
             url: loop.url,
             autoLoad: true,
-            volume: 50
+            volume: 100
         });
+        mySound.play();
     },
     "click .choose-loop": function(evt){
         evt.preventDefault();
