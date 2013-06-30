@@ -10,13 +10,9 @@
                 </thead>
             
                 {{#each rooms}}
-                <tr>
-                    <td>{{this.name}}</td>
-                    <td>{{this.currentPlayerCount}} / 3</td>
-                    <td><a href="/rooms/{{this._id}}">Join!</a></td>
-                </tr>
+                    {{> room_list_item}}
                 {{/each}}
-
+                
             </table>
             
             <input id="create-room-input" type="text">
@@ -25,8 +21,105 @@
     </div>
 </template>
 
-<template name="room_page">
-    <h1 class='lato text-center'> {{ roomName }} </h1>
+
+<template name="room_list_item">
+    <tr>
+        <td>{{name}}</td>
+        <td>{{currentPlayerCount}} / 3</td>
+        <td>{{#unless isFull}}<a class="join-room-link" href="#" data-room="{{_id}}">Join!</a>{{/unless}}</td>
+        <td>{{#if isAdmin}}<a class="delete-room-link" data-room="{{_id}}" href="#">Remove</a></td>{{/if}}</td>
+    </tr>
 </template>
 
+
+
+<template name="room_page">
+    <h1 class='lato text-center'> {{ room.name }} </h1>
+
+    <div class="container">
+        {{#each room.players}}
+            {{> room_player_loops}}
+        {{/each}}
+    </div>
+
+    <div class="container">
+        {{> room_chat}}
+    </div>
+</template>
+
+<template name="room_player_loops">
+    <div class="span4 well text-center">
+        <h4>{{first_name}}</h4>
+
+        <div class="spacer50"></div>
+
+        {{#if isCurrentUser}} 
+
+            {{#each loops}}
+            <button id="room-loop-{{_id}}" class="btn btn-play-loop btn-play-loop-mine"></button>
+            {{/each}}
+
+        {{else}}
+
+            {{#each loops}}
+            <button id="room-loop-{{_id}}" class="btn btn-play-loop"></button>
+            {{/each}}
+
+        {{/if}}
+    </div>
+</template>
+
+
+
+
+<template name="room_chat">
+    <div class="chat">
+        <div class="messages box">
+            {{#unless noMessages}}
+                {{#each messages}}
+                    {{> room_chat_message}}
+                {{/each}}
+            {{/unless}}
+
+            {{#if noMessages}}
+                <span class="loading">
+                    Please wait while we are loading messages for you...
+                </span>
+            {{/if}}
+        </div>
+        <div class="grid input">
+            <div class="row-fluid">
+                <div class="span8">
+                    <input type="text" id="input-chat" placeholder="Type your message here..." />
+                </div>
+                <div class="span4">
+                    <button id="button-sendMessage" class="btn btn-primary">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<template name="room_chat_message">
+    <div class="message">
+        {{#unless isByServer}}
+            <span class="username">{{username}}</span>:
+        {{/unless}}
+        <span class="msg-text">
+            {{#if isByServer}}
+                <span class="server-message">
+            {{/if}}
+            {{text}}
+            {{#if isByServer}}
+                </span>
+            {{/if}}
+        </span>
+        <span class="time">
+            {{time}}
+        </span>
+    </div>
+</template>
 

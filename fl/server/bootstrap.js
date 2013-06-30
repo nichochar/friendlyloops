@@ -2,22 +2,77 @@ var flushSampleData, insertSampleData, insertSampleLoops, insertSampleRooms, sam
 
 sampleRooms = [
     {
-    name: "Jam laboratory",
-    players: [
-        {
-        _id: "x79Qf9i3APqpYAobM"
+        name: "Jam laboratory",
+        players: [
+            {
+                _id: "x79Qf9i3APqpYAobM"
+            }
+        ],
+        ownerId: "x79Qf9i3APqpYAobM"
     }
-    ],
-    ownerId: "x79Qf9i3APqpYAobM"
-}
 ];
 
 sampleLoops = [
     {
-    name: "test loop",
-    length: 12,
-    url: "/loops/ck-part-1-hhat.mp3"
-}
+        name: "Rockin bass lick 1",
+        length: 12,
+        preset: true,
+        userId: "",
+        instrument: "bass",
+        type: "loop",
+        bpm: 110,
+        url: "/loops/presets/bass/110bpm-rock-bass-1.mp3"
+    },
+    {
+        name: "Rockin bass lick 2",
+        length: 12,
+        preset: true,
+        userId: "",
+        instrument: "bass",
+        type: "loop",
+        bpm: 110,
+        url: "/loops/presets/bass/110bpm-rock-bass-2.mp3"
+    },
+    {
+        name: "Shredding guitar lick 1",
+        length: 12,
+        preset: true,
+        userId: "",
+        instrument: "guitar",
+        type: "loop",
+        bpm: 110,
+        url: "/loops/presets/guitar/110bpm-rock-guitar-1.mp3"
+    },
+    {
+        name: "Shredding guitar lick 2",
+        length: 12,
+        preset: true,
+        userId: "",
+        instrument: "guitar",
+        type: "loop",
+        bpm: 110,
+        url: "/loops/presets/guitar/110bpm-rock-guitar-2.mp3"
+    },
+    {
+        name: "Gut-busting drums 1",
+        length: 12,
+        preset: true,
+        userId: "",
+        instrument: "drums",
+        type: "loop",
+        bpm: 110,
+        url: "/loops/presets/drums/110bpm-rock-drums-1.mp3"
+    },
+    {
+        name: "Gut-busting drums 2",
+        length: 12,
+        preset: true,
+        userId: "",
+        instrument: "drums",
+        type: "loop",
+        bpm: 110,
+        url: "/loops/presets/drums/110bpm-rock-drums-2.mp3"
+    }
 ];
 
 insertSampleRooms = function() {
@@ -54,4 +109,3 @@ if (Rooms.find().count() === 0) {
     flushSampleData();
     insertSampleData();
 }
-

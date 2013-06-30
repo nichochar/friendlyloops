@@ -4,6 +4,7 @@
 /*@import "expression-ui-sass/_expressionui";*/
 /*$grayLight:             #999 !default;*/
 /*$bodyBackground:        $white !default;*/
+/*$bodyBackground:        "../img/Optimized-wood-bkg.jpg";*/
 /*@import "compass/css3/images";*/
 /* Lato - Google Web Fonts */
 /*$sansFontFamily:        "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;*/
@@ -11,7 +12,7 @@
 /* line 22, ../sass/_text.scss */
 a {
   text-decoration: none;
-  color: #f89406; }
+  color: #46a546; }
 
 /* line 27, ../sass/_text.scss */
 .lato {
@@ -79,12 +80,7 @@ em, .em {
 .italic {
   font-style: italic; }
 
-/* line 54, ../sass/_text.scss */
-.page-admin h1, .page-admin h2 {
-  color: white;
-  text-shadow: 0 1px 0 black; }
-
-/* line 56, ../sass/_text.scss */
+/* line 55, ../sass/_text.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-family: inherit;
@@ -92,55 +88,55 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 20px;
   color: inherit;
   text-rendering: optimizelegibility; }
-  /* line 63, ../sass/_text.scss */
+  /* line 62, ../sass/_text.scss */
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-weight: normal;
     line-height: 1;
-    color: #e8e8e8; }
+    /*color: $grayLight;*/ }
 
-/* line 72, ../sass/_text.scss */
+/* line 71, ../sass/_text.scss */
 h1,
 h2,
 h3 {
   line-height: 40px; }
 
-/* line 75, ../sass/_text.scss */
+/* line 74, ../sass/_text.scss */
 h1, .h1 {
   font-size: 98px; }
 
-/* line 76, ../sass/_text.scss */
+/* line 75, ../sass/_text.scss */
 h2, .h2 {
   font-size: 31.5px; }
 
-/* line 77, ../sass/_text.scss */
+/* line 76, ../sass/_text.scss */
 h3, .h3 {
   font-size: 24.5px; }
 
-/* line 78, ../sass/_text.scss */
+/* line 77, ../sass/_text.scss */
 h4, .h4 {
   font-size: 17.5px; }
 
-/* line 79, ../sass/_text.scss */
+/* line 78, ../sass/_text.scss */
 h5, .h5 {
   font-size: 14px; }
 
-/* line 80, ../sass/_text.scss */
+/* line 79, ../sass/_text.scss */
 h6, .h6 {
   font-size: 11.9px; }
 
-/* line 82, ../sass/_text.scss */
+/* line 81, ../sass/_text.scss */
 h1 small {
   font-size: 24.5px; }
 
-/* line 83, ../sass/_text.scss */
+/* line 82, ../sass/_text.scss */
 h2 small {
   font-size: 17.5px; }
 
-/* line 84, ../sass/_text.scss */
+/* line 83, ../sass/_text.scss */
 h3 small {
   font-size: 14px; }
 
-/* line 85, ../sass/_text.scss */
+/* line 84, ../sass/_text.scss */
 h4 small {
   font-size: 14px; }
 
@@ -2292,8 +2288,8 @@ a.rowlink {
 /* General Demo Style */
 @font-face {
   font-family: 'codropsicons';
-  src: url(/assets/fonts/codropsicons/codropsicons.eot);
-  src: url(/assets/fonts/codropsicons/codropsicons.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/codropsicons/codropsicons.woff) format("woff"), url(/assets/fonts/codropsicons/codropsicons.ttf) format("truetype"), url(/assets/fonts/codropsicons/codropsicons.svg#codropsicons) format("svg");
+  src: url(/fonts/codropsicons/codropsicons.eot);
+  src: url(/fonts/codropsicons/codropsicons.eot?#iefix) format("embedded-opentype"), url(/fonts/codropsicons/codropsicons.woff) format("woff"), url(/fonts/codropsicons/codropsicons.ttf) format("truetype"), url(/fonts/codropsicons/codropsicons.svg#codropsicons) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2494,8 +2490,8 @@ a:active {
     display: none; } }
 @font-face {
   font-family: 'icomoon';
-  src: url(/assets/fonts/icomoon/icomoon.eot);
-  src: url(/assets/fonts/icomoon/icomoon.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/icomoon/icomoon.woff) format("woff"), url(/assets/fonts/icomoon/icomoon.ttf) format("truetype"), url(/assets/fonts/icomoon/icomoon.svg#icomoon) format("svg");
+  src: url(/fonts/icomoon/icomoon.eot);
+  src: url(/fonts/icomoon/icomoon.eot?#iefix) format("embedded-opentype"), url(/fonts/icomoon/icomoon.woff) format("woff"), url(/fonts/icomoon/icomoon.ttf) format("truetype"), url(/fonts/icomoon/icomoon.svg#icomoon) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -5878,7 +5874,7 @@ button.ui-button-icons-only {
 /* line 812, ../sass/jquery-ui-bootstrap-sass/_all.scss */
 .ui-buttonset .ui-button {
   margin-left: 0;
-  margin-right: -.4em; }
+  margin-right: -0.4em; }
 
 /* workarounds */
 /* line 815, ../sass/jquery-ui-bootstrap-sass/_all.scss */
@@ -6283,8 +6279,8 @@ button.ui-button::-moz-focus-inner {
 
 /* line 1064, ../sass/jquery-ui-bootstrap-sass/_all.scss */
 .ui-slider-horizontal .ui-slider-handle {
-  top: -.3em;
-  margin-left: -.6em; }
+  top: -0.3em;
+  margin-left: -0.6em; }
 
 /* line 1065, ../sass/jquery-ui-bootstrap-sass/_all.scss */
 .ui-slider-horizontal .ui-slider-range {
@@ -6306,9 +6302,9 @@ button.ui-button::-moz-focus-inner {
 
 /* line 1070, ../sass/jquery-ui-bootstrap-sass/_all.scss */
 .ui-slider-vertical .ui-slider-handle {
-  left: -.3em;
+  left: -0.3em;
   margin-left: 0;
-  margin-bottom: -.6em; }
+  margin-bottom: -0.6em; }
 
 /* line 1071, ../sass/jquery-ui-bootstrap-sass/_all.scss */
 .ui-slider-vertical .ui-slider-range {
@@ -7405,11 +7401,13 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  background-color: "../img/Optimized-wood-bkg.jpg";
-  color: #333333; }
+  /*background-color: $bodyBackground;*/
+  /*color: $textColor;*/
+  color: white;
+  background: url(/img/backgrounds/wood-bkg-black-opt.jpg) no-repeat center fixed; }
 
 /*=== Float Containment and Bug Fixes (Do Not Alter These!) ===*/
-/* line 22, ../sass/web/_layout.scss */
+/* line 24, ../sass/web/_layout.scss */
 body:before {
   /*Opera min-height 100% Fix*/
   content: "";
@@ -7419,7 +7417,7 @@ body:before {
   margin-top: -32767px;
   /*eliminate need for inner non clearing element*/ }
 
-/* line 30, ../sass/web/_layout.scss */
+/* line 32, ../sass/web/_layout.scss */
 #wrapper:after,
 #content:after {
   /*#content:after for Float Containment*/
@@ -7431,43 +7429,30 @@ body:before {
   font-size: 0; }
 
 /*===  Begin Layout Structure ===*/
-/* line 39, ../sass/web/_layout.scss */
+/* line 41, ../sass/web/_layout.scss */
 #wrapper {
   text-align: center;
   margin: auto;
   min-height: 100%;
-  /*background: url(/assets/img/backgrounds/red_hexagons.jpg) no-repeat center top fixed; */
+  /*background: url(/img/backgrounds/red_hexagons.jpg) no-repeat center top fixed; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
-/*#navbar-header {*/
-/*position: fixed;*/
-/*top: 0;*/
-/*left: 0;*/
-/*width: 100%;*/
-/*min-width: 320px;*/
-/*height: $navbarHeight;*/
-/*padding: 0;*/
-/*margin: 0 0 20px 0;*/
-/*box-shadow: 0 -8px 5px 10px rgba(0,0,0,.1);*/
-/*border-bottom: 1px solid #221f1c;*/
-/*z-index: $zindexFixedNavbar;*/
-/*}*/
-/* line 64, ../sass/web/_layout.scss */
+/* line 52, ../sass/web/_layout.scss */
 #content {
   /*padding-bottom: 50px;*/
   min-height: 500px; }
 
-/* line 69, ../sass/web/_layout.scss */
+/* line 57, ../sass/web/_layout.scss */
 .content-page {
   /*margin-top: $headerHeight;*/ }
 
 /*.footer-push { */
 /*height: $footerHeight; */
 /*}*/
-/* line 78, ../sass/web/_layout.scss */
+/* line 66, ../sass/web/_layout.scss */
 .content-page-full {
   position: absolute;
   width: 100%;
@@ -7613,23 +7598,24 @@ ul li {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  /*background: url(/assets/img/backgrounds/red_mesh_titlebar.jpg) no-repeat center top fixed; */
+  color: #333333;
+  /*background: url(/img/backgrounds/red_mesh_titlebar.jpg) no-repeat center top fixed; */
   /*background: white;*/ }
 
-/* line 16, ../sass/web/components/_containers.scss */
+/* line 17, ../sass/web/components/_containers.scss */
 .container {
   width: 960px; }
 
-/* line 20, ../sass/web/components/_containers.scss */
+/* line 21, ../sass/web/components/_containers.scss */
 .gridcontainer > * {
   float: left; }
 
-/* line 23, ../sass/web/components/_containers.scss */
+/* line 24, ../sass/web/components/_containers.scss */
 .artist-container-wide {
   width: 460px;
   height: 280px;
   position: relative; }
-  /* line 28, ../sass/web/components/_containers.scss */
+  /* line 29, ../sass/web/components/_containers.scss */
   .artist-container-wide .overlay {
     position: absolute;
     width: 100%;
@@ -7637,32 +7623,32 @@ ul li {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); }
 
-/* line 37, ../sass/web/components/_containers.scss */
+/* line 38, ../sass/web/components/_containers.scss */
 .flex-table-primary {
   width: 99%;
   padding-right: 5px; }
 
-/* line 42, ../sass/web/components/_containers.scss */
+/* line 43, ../sass/web/components/_containers.scss */
 .flex-table-primary, .flex-table-secondary {
   vertical-align: top; }
 
-/* line 46, ../sass/web/components/_containers.scss */
+/* line 47, ../sass/web/components/_containers.scss */
 .flex-table-secondary {
   width: 1%;
   max-width: 1%; }
 
-/* line 50, ../sass/web/components/_containers.scss */
+/* line 51, ../sass/web/components/_containers.scss */
 .flex-table-form {
   float: left;
   width: 100%; }
 
-/* line 55, ../sass/web/components/_containers.scss */
+/* line 56, ../sass/web/components/_containers.scss */
 .flex-table-btn {
   float: right;
   width: auto;
   white-space: nowrap; }
 
-/* line 64, ../sass/web/components/_containers.scss */
+/* line 65, ../sass/web/components/_containers.scss */
 .span12 {
   width: 960px; }
 
@@ -7677,8 +7663,8 @@ ul li {
 /* font-face */
 @font-face {
   font-family: "GeneralFoundicons";
-  src: url(/assets/fonts/fonts/general_foundicons.eot);
-  src: url(/assets/fonts/fonts/general_foundicons.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/fonts/general_foundicons.woff) format("woff"), url(/assets/fonts/fonts/general_foundicons.ttf) format("truetype"), url(/assets/fonts/fonts/general_foundicons.svg#GeneralFoundicons) format("svg");
+  src: url(/fonts/fonts/general_foundicons.eot);
+  src: url(/fonts/fonts/general_foundicons.eot?#iefix) format("embedded-opentype"), url(/fonts/fonts/general_foundicons.woff) format("woff"), url(/fonts/fonts/general_foundicons.ttf) format("truetype"), url(/fonts/fonts/general_foundicons.svg#GeneralFoundicons) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -7893,8 +7879,8 @@ ul li {
 /* font-face */
 @font-face {
   font-family: "SocialFoundicons";
-  src: url(/assets/fonts/fonts/social_foundicons.eot);
-  src: url(/assets/fonts/social_foundicons.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/social_foundicons.woff) format("woff"), url(/assets/fonts/social_foundicons.ttf) format("truetype"), url(/assets/fonts/social_foundicons.svg#SocialFoundicons) format("svg");
+  src: url(/fonts/fonts/social_foundicons.eot);
+  src: url(/fonts/social_foundicons.eot?#iefix) format("embedded-opentype"), url(/fonts/social_foundicons.woff) format("woff"), url(/fonts/social_foundicons.ttf) format("truetype"), url(/fonts/social_foundicons.svg#SocialFoundicons) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8043,8 +8029,8 @@ ul li {
 /* font-face */
 @font-face {
   font-family: "GeneralEnclosedFoundicons";
-  src: url(/assets/fonts/general_enclosed_foundicons.eot);
-  src: url(/assets/fonts/general_enclosed_foundicons.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/general_enclosed_foundicons.woff) format("woff"), url(/assets/fonts/general_enclosed_foundicons.ttf) format("truetype"), url(/assets/fonts/general_enclosed_foundicons.svg#GeneralEnclosedFoundicons) format("svg");
+  src: url(/fonts/general_enclosed_foundicons.eot);
+  src: url(/fonts/general_enclosed_foundicons.eot?#iefix) format("embedded-opentype"), url(/fonts/general_enclosed_foundicons.woff) format("woff"), url(/fonts/general_enclosed_foundicons.ttf) format("truetype"), url(/fonts/general_enclosed_foundicons.svg#GeneralEnclosedFoundicons) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8265,7 +8251,7 @@ ul li {
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url(/assets/vendor/bootstrap/img/glyphicons-halflings.png);
+  background-image: url(/vendor/bootstrap/img/glyphicons-halflings.png);
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px; }
@@ -8285,7 +8271,7 @@ ul li {
 .dropdown-menu > .active > a > [class*=" icon-bootstrap-"],
 .dropdown-submenu:hover > a > [class^="icon-bootstrap-"],
 .dropdown-submenu:hover > a > [class*=" icon-bootstrap-"] {
-  background-image: url(/assets/vendor/bootstrap/img/glyphicons-halflings-white.png); }
+  background-image: url(/vendor/bootstrap/img/glyphicons-halflings-white.png); }
 
 /* line 653, ../sass/web/components/_icons.scss */
 .icon-bootstrap-glass {
@@ -8293,19 +8279,19 @@ ul li {
 
 /* line 654, ../sass/web/components/_icons.scss */
 .icon-bootstrap-music {
-  background-position: -24px  0; }
+  background-position: -24px 0; }
 
 /* line 655, ../sass/web/components/_icons.scss */
 .icon-bootstrap-search {
-  background-position: -48px  0; }
+  background-position: -48px 0; }
 
 /* line 656, ../sass/web/components/_icons.scss */
 .icon-bootstrap-envelope {
-  background-position: -72px  0; }
+  background-position: -72px 0; }
 
 /* line 657, ../sass/web/components/_icons.scss */
 .icon-bootstrap-heart {
-  background-position: -96px  0; }
+  background-position: -96px 0; }
 
 /* line 658, ../sass/web/components/_icons.scss */
 .icon-bootstrap-star {
@@ -8369,23 +8355,23 @@ ul li {
 
 /* line 674, ../sass/web/components/_icons.scss */
 .icon-bootstrap-home {
-  background-position: 0      -24px; }
+  background-position: 0 -24px; }
 
 /* line 675, ../sass/web/components/_icons.scss */
 .icon-bootstrap-file {
-  background-position: -24px  -24px; }
+  background-position: -24px -24px; }
 
 /* line 676, ../sass/web/components/_icons.scss */
 .icon-bootstrap-time {
-  background-position: -48px  -24px; }
+  background-position: -48px -24px; }
 
 /* line 677, ../sass/web/components/_icons.scss */
 .icon-bootstrap-road {
-  background-position: -72px  -24px; }
+  background-position: -72px -24px; }
 
 /* line 678, ../sass/web/components/_icons.scss */
 .icon-bootstrap-download-alt {
-  background-position: -96px  -24px; }
+  background-position: -96px -24px; }
 
 /* line 679, ../sass/web/components/_icons.scss */
 .icon-bootstrap-download {
@@ -8449,23 +8435,23 @@ ul li {
 
 /* line 695, ../sass/web/components/_icons.scss */
 .icon-bootstrap-tag {
-  background-position: 0      -48px; }
+  background-position: 0 -48px; }
 
 /* line 696, ../sass/web/components/_icons.scss */
 .icon-bootstrap-tags {
-  background-position: -25px  -48px; }
+  background-position: -25px -48px; }
 
 /* line 697, ../sass/web/components/_icons.scss */
 .icon-bootstrap-book {
-  background-position: -48px  -48px; }
+  background-position: -48px -48px; }
 
 /* line 698, ../sass/web/components/_icons.scss */
 .icon-bootstrap-bookmark {
-  background-position: -72px  -48px; }
+  background-position: -72px -48px; }
 
 /* line 699, ../sass/web/components/_icons.scss */
 .icon-bootstrap-print {
-  background-position: -96px  -48px; }
+  background-position: -96px -48px; }
 
 /* line 700, ../sass/web/components/_icons.scss */
 .icon-bootstrap-camera {
@@ -8529,23 +8515,23 @@ ul li {
 
 /* line 716, ../sass/web/components/_icons.scss */
 .icon-bootstrap-pencil {
-  background-position: 0      -72px; }
+  background-position: 0 -72px; }
 
 /* line 717, ../sass/web/components/_icons.scss */
 .icon-bootstrap-map-marker {
-  background-position: -24px  -72px; }
+  background-position: -24px -72px; }
 
 /* line 718, ../sass/web/components/_icons.scss */
 .icon-bootstrap-adjust {
-  background-position: -48px  -72px; }
+  background-position: -48px -72px; }
 
 /* line 719, ../sass/web/components/_icons.scss */
 .icon-bootstrap-tint {
-  background-position: -72px  -72px; }
+  background-position: -72px -72px; }
 
 /* line 720, ../sass/web/components/_icons.scss */
 .icon-bootstrap-edit {
-  background-position: -96px  -72px; }
+  background-position: -96px -72px; }
 
 /* line 721, ../sass/web/components/_icons.scss */
 .icon-bootstrap-share {
@@ -8609,23 +8595,23 @@ ul li {
 
 /* line 737, ../sass/web/components/_icons.scss */
 .icon-bootstrap-plus-sign {
-  background-position: 0      -96px; }
+  background-position: 0 -96px; }
 
 /* line 738, ../sass/web/components/_icons.scss */
 .icon-bootstrap-minus-sign {
-  background-position: -24px  -96px; }
+  background-position: -24px -96px; }
 
 /* line 739, ../sass/web/components/_icons.scss */
 .icon-bootstrap-remove-sign {
-  background-position: -48px  -96px; }
+  background-position: -48px -96px; }
 
 /* line 740, ../sass/web/components/_icons.scss */
 .icon-bootstrap-ok-sign {
-  background-position: -72px  -96px; }
+  background-position: -72px -96px; }
 
 /* line 741, ../sass/web/components/_icons.scss */
 .icon-bootstrap-question-sign {
-  background-position: -96px  -96px; }
+  background-position: -96px -96px; }
 
 /* line 742, ../sass/web/components/_icons.scss */
 .icon-bootstrap-info-sign {
@@ -8689,23 +8675,23 @@ ul li {
 
 /* line 758, ../sass/web/components/_icons.scss */
 .icon-bootstrap-exclamation-sign {
-  background-position: 0      -120px; }
+  background-position: 0 -120px; }
 
 /* line 759, ../sass/web/components/_icons.scss */
 .icon-bootstrap-gift {
-  background-position: -24px  -120px; }
+  background-position: -24px -120px; }
 
 /* line 760, ../sass/web/components/_icons.scss */
 .icon-bootstrap-leaf {
-  background-position: -48px  -120px; }
+  background-position: -48px -120px; }
 
 /* line 761, ../sass/web/components/_icons.scss */
 .icon-bootstrap-fire {
-  background-position: -72px  -120px; }
+  background-position: -72px -120px; }
 
 /* line 762, ../sass/web/components/_icons.scss */
 .icon-bootstrap-eye-open {
-  background-position: -96px  -120px; }
+  background-position: -96px -120px; }
 
 /* line 763, ../sass/web/components/_icons.scss */
 .icon-bootstrap-eye-close {
@@ -8771,23 +8757,23 @@ ul li {
 
 /* line 779, ../sass/web/components/_icons.scss */
 .icon-bootstrap-hdd {
-  background-position: 0      -144px; }
+  background-position: 0 -144px; }
 
 /* line 780, ../sass/web/components/_icons.scss */
 .icon-bootstrap-bullhorn {
-  background-position: -24px  -144px; }
+  background-position: -24px -144px; }
 
 /* line 781, ../sass/web/components/_icons.scss */
 .icon-bootstrap-bell {
-  background-position: -48px  -144px; }
+  background-position: -48px -144px; }
 
 /* line 782, ../sass/web/components/_icons.scss */
 .icon-bootstrap-certificate {
-  background-position: -72px  -144px; }
+  background-position: -72px -144px; }
 
 /* line 783, ../sass/web/components/_icons.scss */
 .icon-bootstrap-thumbs-up {
-  background-position: -96px  -144px; }
+  background-position: -96px -144px; }
 
 /* line 784, ../sass/web/components/_icons.scss */
 .icon-bootstrap-thumbs-down {
@@ -8896,10 +8882,10 @@ ul li {
   height: 44px;
   cursor: pointer;
   /*margin: 20px;*/
-  background: url(/assets/img/social/fb-connect-xlarge.png) no-repeat center; }
+  background: url(/img/social/fb-connect-xlarge.png) no-repeat center; }
   /* line 50, ../sass/web/components/_buttons.scss */
   .fb-connect-btn:hover {
-    background: url(/assets/img/social/fb-connect-xlarge-glow.png) no-repeat center; }
+    background: url(/img/social/fb-connect-xlarge-glow.png) no-repeat center; }
 
 /* line 4, ../sass/web/components/_forms.scss */
 textarea.input, input[type="text"].input, input[type="password"].input, input[type="datetime"].input, input[type="datetime-local"].input, input[type="date"].input, input[type="month"].input, input[type="time"].input, input[type="week"].input, input[type="number"].input, input[type="email"].input, input[type="url"].input, input[type="search"].input, input[type="tel"].input, input[type="color"].input, .uneditable-input.input {

@@ -1,4 +1,21 @@
-var getAvatarUrl, getDisplayName, getFacebookName, getFacebookNameById;
+/*
+ * COMMON, GLOBAL USER FUNCTIONS
+ */
+
+isAdminById=function(userId){
+  var user = Meteor.users.findOne(userId);
+  return user && isAdmin(user);
+};
+
+isAdmin=function(user){
+  if(!user || typeof user === 'undefined')
+    return false;
+  return !!user.isAdmin;
+};
+
+adminUsers = function(){
+  return Meteor.users.find({isAdmin : true}).fetch();
+};
 
 getDisplayName = function(user) {
     if (user.profile && user.profile.name) {
@@ -7,7 +24,9 @@ getDisplayName = function(user) {
         return user.username;
     }
 };
-
+getDisplayNameById = function(userId){
+  return getDisplayName(Meteor.users.findOne(userId));
+}
 getFacebookName = function(user) {
     try {
         return user.services.facebook.username;

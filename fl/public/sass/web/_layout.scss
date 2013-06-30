@@ -14,8 +14,10 @@ body {
     font-family: $baseFontFamily;
     font-size: $baseFontSize;
     line-height: $baseLineHeight;
-    background-color: $bodyBackground;
-    color: $textColor;
+    /*background-color: $bodyBackground;*/
+    /*color: $textColor;*/
+    color: $white;
+    background: url(#{$imagePath}/backgrounds/wood-bkg-black-opt.jpg) no-repeat center fixed; 
 }
 
 /*=== Float Containment and Bug Fixes (Do Not Alter These!) ===*/
@@ -47,20 +49,6 @@ body:before {/*Opera min-height 100% Fix*/
     background-size: cover;
 
 } 
-/*#navbar-header {*/
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*min-width: 320px;*/
-    /*height: $navbarHeight;*/
-
-    /*padding: 0;*/
-    /*margin: 0 0 20px 0;*/
-    /*box-shadow: 0 -8px 5px 10px rgba(0,0,0,.1);*/
-    /*border-bottom: 1px solid #221f1c;*/
-    /*z-index: $zindexFixedNavbar;*/
-/*}*/
 #content {
     /*padding-bottom: 50px;*/
     min-height:500px;

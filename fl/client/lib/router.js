@@ -61,18 +61,6 @@ vim: ts=4 sw=4 et :
             type: 'rooms'
         });
     };
-    routeArtist = function(artistId) {
-        Session.set('current_artistId', artistId);
-        return showView('artist_page', {
-            type: 'artists'
-        });
-    };
-    routeArtists = function(page) {
-        return showView('artists_page', {
-            page: page,
-            type: 'artists'
-        });
-    };
     routeUser = function(userId) {
         Session.set('current_userId', userId);
         return showView('user_page', {

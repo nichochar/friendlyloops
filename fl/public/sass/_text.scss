@@ -21,7 +21,7 @@ $headingsColor:         inherit !default; // empty to use BS default, $textColor
 
 a {
     text-decoration: none;
-    color: $orange;
+    color: $green;
 }
 
 .lato { font-family: $sansFontFamily; }
@@ -41,7 +41,7 @@ a {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-.text-green { color: $cp-green; }
+.text-green { color: $green; }
 
 em, .em { font-style: italic; }
 .book { font-weight: 100; }
@@ -51,7 +51,6 @@ em, .em { font-style: italic; }
 .extra-bold { font-weight: 800; }
 
 .italic { font-style: italic; }
-.page-admin h1, .page-admin h2 { color: white; text-shadow: 0 1px 0 black; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: ($baseLineHeight / 2) 0;
@@ -63,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
   small {
     font-weight: normal;
     line-height: 1;
-    color: $grayLight;
+    /*color: $grayLight;*/
   }
 }
 

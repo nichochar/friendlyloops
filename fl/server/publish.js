@@ -10,6 +10,8 @@ Meteor.publish('currentUser', function() {
     return Meteor.users.find(this.userId);
 });
 
+
+// Do not publish user secret info to the client
 Meteor.publish('allUsers', function() {
     return Meteor.users.find({}, {
         fields: {
@@ -35,10 +37,10 @@ Meteor.startup(function() {
             return true;
         },
         update: function(userId, doc, fields, modifier) {
-            return doc._id && doc._id === userId;
+            return (doc._id && doc._id === userId);
         },
         remove: function(userId, doc) {
-            return doc._id && doc._id === userId;
+            return (doc._id && doc._id === userId);
         }
     });
 });
@@ -61,15 +63,36 @@ Meteor.startup(function() {
             return true;
         },
         update: function(userId, doc) {
-            return doc._id && doc._id === userId;
+            return (doc._id && doc._id === userId);
         },
         remove: function(userId, doc) {
-            return doc._id && doc._id === userId;
+            return (doc._id && doc._id === userId);
         }
     });
 });
 
-/* ALERTS
-*/
 
 
+/*
+ * CHAT
+ */
+Meteor.publish("messages", function(roomId){
+    return Messages.find({ roomId: roomId });
+});
+
+
+// Allow anyone to post a message, but only the message owner to update or remove
+Meteor.startup(function(){
+    return Messages.allow({
+        insert: function(userId, doc){
+            return true;
+        },
+        update: function(userId, doc){
+            //return (doc.userId && doc.userId === userId);
+            return false;
+        },
+        remove: function(userId, doc){
+            return (doc.userId && doc.userId === userId);
+        }
+    });
+});

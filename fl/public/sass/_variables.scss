@@ -8,9 +8,9 @@
 
 @import "bootstrap-sass/_variables";
 
-$imagePath:                 '/assets/img';
-$fontPath:                  '/assets/fonts';
-$vendorPath:                '/assets/vendor';
+$imagePath:                 '/img';
+$fontPath:                  '/fonts';
+$vendorPath:                '/vendor';
 
 // CrowdPush Theme Colors
 // ---------------------------
@@ -49,8 +49,8 @@ $purple:                #7a43b6 !default;
 // Scaffolding
 // -------------------------
 /*$bodyBackground:        $white !default;*/
-$bodyBackground:        "../img/Optimized-wood-bkg.jpg";
-$textColor:             $grayDark !default;
+/*$bodyBackground:        "../img/Optimized-wood-bkg.jpg";*/
+$textColor:             $white !default;
 
 
 // Layout dimensions

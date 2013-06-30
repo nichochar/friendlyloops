@@ -10,6 +10,7 @@
 .well {
     border: 3px inset #e3e3e3;
     @include border-radius(20px);
+    color: $grayDark;
     /*background: url(#{$imagePath}/backgrounds/red_mesh_titlebar.jpg) no-repeat center top fixed; */
     /*background: white;*/
 }

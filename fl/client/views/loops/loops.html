@@ -1,8 +1,68 @@
 <template name="loops_page">
     <h1> Loops </h1>
-    
+    <h5> Choose 3 friendly loops </h5>
+
+    <div class="container">
+        <div class="span3">
+            <h4>Drums</h4>
+            <hr>
+            <ul>
+                {{#each loops.drums}}
+                    {{> loop_item}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="span3">
+            <h4>Bass</h4>
+            <hr>
+            <ul>
+                {{#each loops.bass}}
+                    {{> loop_item}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="span3">
+            <h4>Guitar</h4>
+            <hr>
+            <ul>
+                {{#each loops.guitar}}
+                    {{> loop_item}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="span3">
+            <h4>Vox</h4>
+            <hr>
+            <ul>
+                {{#each loops.misc}}
+                    {{> loop_item}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="span12">
+            <h4>Misc</h4>
+            <hr>
+            <ul>
+                {{#each loops.misc}}
+                    {{> loop_item}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
 </template>
 
 <template name="loop_item">
-    <div> Loop </div>
+    <li>
+        <div class="loop-item {{#if misc}}pull-left{{/if}} clearfix">
+            <a href="#" class="play-loop pull-left" data-loop="{{_id}}">
+                <i class="icon-bootstrap-play icon-white  pull-left"></i> 
+            </a>
+            <a href="#" class="choose-loop" data-loop="{{_id}}">
+                <span class="loop-item-name">{{name}}</span>
+            </a>
+        </div>
+    </li>
 </template>

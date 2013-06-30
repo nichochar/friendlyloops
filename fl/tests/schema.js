@@ -1,6 +1,6 @@
 
 Meteor.user = {
-    _id:    "asdfasdfasdf",
+    _id:    "asdfasdfasdf",         // facebook user id
     services: {
         facebook: {
             id: "218293811",
@@ -21,11 +21,23 @@ Room = {
             _id: "sakdjflas"
         }
     ],
+    playerLoops: [
+        {
+            userId: "asdfasdf",
+            loopId: "asdfa"
+        }
+    ],
     createdAt: "timestamp"
 
 };
 
+Message = {
+    _id: "asdfkjlasdf",
+    userId: "asdlfkjasdf",
+    
+    
 
+};
 
 Loop = {
     _id: "asdlfkjasdfas",
