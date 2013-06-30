@@ -18,3 +18,7 @@ Template.rooms_page.events
             name: $("#create-room-input").val()
         window.location.href = '/rooms/'+newRoomId
 
+
+Template.room_page.helpers
+    roomName: ->
+      Session.get('current_roomId')
