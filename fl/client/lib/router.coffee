@@ -43,10 +43,13 @@ do ->
 
     # room Routes
     routeRoom = (roomId) ->
+        Meteor.subscribe 'room', roomId
         Session.set('current_roomId', roomId)
         showView 'room_page', { type: 'rooms' }
 
     routeRooms = (page) ->
+        # Rooms
+        Meteor.subscribe 'rooms'
         showView 'rooms_page', { page: page, type: 'rooms' }
 
 
@@ -89,10 +92,9 @@ do ->
         #only: 'admin_page'
 
 
-Meteor.startup ->
-    Meteor.autorun ->
-        #console.log Meteor.Router.page()
-        Meteor.Router.page()    # Reactive variable = re-run on page change
-        #analyticsRequest()      # Track page routing (client side pushState so need to do this manually)
+    Meteor.startup ->
+        Deps.autorun ->
+
+            Meteor.Router.page()    # Reactive variable = re-run on page change
         
 
